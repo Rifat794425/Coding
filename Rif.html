@@ -57,7 +57,7 @@ header .logo {
 }
 
 header .nav {
-    width: 40%;
+    width: 50%;
 }
 
 header .nav>ul {
@@ -78,7 +78,7 @@ header .nav>ul>li {
 header .nav>ul>li>a {
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
+    padding: 3px 6px;
 }
 
 header .nav>ul>li>a :hover {
@@ -1529,6 +1529,20 @@ footer>div .fot_up>div {
 .fot_down div {
     font-size: 0.8rem;
     color: rgb(206, 206, 206);
+}
+  @media screen and (min-width: 791px) and (max-width: 3000px) {
+    .toggle_heder {
+        display: none;
+    }
+    header nav:nth-child(1) {
+        display: none;
+    }
+    section {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
 }
 
 @media screen and (min-width: 350px) and (max-width: 790px) {
