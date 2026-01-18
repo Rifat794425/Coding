@@ -1,1 +1,2533 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tt.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  
+ 
+ <style>
+  /*  আপনার সম্পূর্ণ CSS কোড এখানে দিলাম, ঠিক যেভাবে আছে সেভাবেই:
+*/
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    background-origin: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* max-width: 1303px;*/
+    width: 98%;
+    padding: 1%;
+    position: sticky;
+    top: 0%;
+    z-index: 999;
+}
+
+header>div {
+    width: 95%;
+    margin: auto;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 23%;
+    gap: 10px;
+}
+
+header .nav {
+    width: 40%;
+}
+
+header .nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px;
+}
+
+header .nav>ul>li {
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: 0px 0px;
+}
+
+header .nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+header .nav>ul>li>a :hover {
+    text-decoration: underline;
+    color: black;
+    background-color: gray;
+    border-radius: 5px;
+}
+/*meda nav bar */
+
+.moble_heder {
+    padding: 3px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 3%;
+    bottom: 25%;
+    display: none;
+    cursor: pointer;
+}
+
+header .nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    list-style: none;
+    background-color: orangered;
+    width: 100%;
+    top: -500%;
+    left: 0%;
+    padding: 10px;
+    margin: 0px 0px;
+    transition: all 0.7s linear;
+}
+
+header .nav2 ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    list-style: none;
+    background-color: orangered;
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0px;
+}
+
+header .nav2 {
+    display: none;
+}
+
+header .toggle_heder {
+    display: block;
+    top: 100%;
+    left: -4.2%;
+}
+
+header .nav2>ul>li {
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 6px 0px;
+}
+
+header .nav2>ul>li>a {
+    text-decoration: none;
+    color: white;
+    padding: 4px 11px;
+}
+
+header .nav2>ul>li>a:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: gray;
+    border-radius: 3px;
+}
+/* degain start-*/
+
+header .btn {
+    width: 23%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0%;
+}
+
+header .btn button {
+    background-color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+header .btn button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+header .btn button:nth-child(2) {
+    background-color: white;
+    color: black;
+    border: 100px solid black;
+    font-weight: bold;
+}
+
+main section {
+    width: 100%;
+    min-height: 90vh;
+    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+main section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(177, 26, 26), rgb(43, 4, 4));
+    z-index: -1;
+}
+
+main section>div {
+    color: white;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.mini {
+    width: 150px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    right: 06%;
+    top: 1%;
+    animation: mini 2s infinite alternate ease-in-out;
+}
+
+.left_side1 h1 {
+    font-size: 4.5rem;
+    margin: 80px 0px 30px 0px;
+}
+
+.left_side1 p {
+    font-size: 1.2rem;
+    margin: 10px 0px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    padding-left: 55px;
+    transition: all 0.4s ease;
+}
+
+.left_side1 p:hover {
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    text-shadow: 0px 0px 10px 20px black;
+}
+
+.left_side1 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    margin-right: 15px;
+    transition: all 0.4s ease;
+}
+
+.left_side1 .bok {
+    background-color: yellow;
+    color: black;
+}
+
+.left_side1 .ex:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.left_side1 .bok:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.left_side1 {
+    width: 50%;
+    height: 100%;
+}
+
+.right_side1 {
+    width: 50%;
+    height: 100%;
+    mix-blend-mode: multiply
+}
+
+.dimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.dimg {
+    width: 133%;
+    height: 590px;
+    transform: translate(-05%, 15%);
+}
+
+@keyframes mini {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+main section .clon span,
+main p {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0px 0px 10px wheat;
+}
+
+section .clon span:hover {
+    color: white;
+    -webkit-text-stroke: 0px white;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0px;
+}
+
+.s2 {
+    background-color: rgb(206, 188, 174);
+    padding: 6em 0px;
+}
+
+section>div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left_side2_title {
+    width: 50%;
+    text-align: left;
+}
+
+.left_side2_title h1 {
+    font-size: 2.5rem;
+}
+
+.left_side2_title span {
+    color: orangered;
+}
+
+.right_side2_icons {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+    color: red;
+}
+
+.right_side2_icons div {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    padding: 02px 16px;
+    text-align: center;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    color: red;
+    gap: 7px;
+}
+
+.right_side2_icons div:hover {
+    transform: translateY(-10%);
+}
+
+.left_side3 {
+    width: 50%;
+    min-height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right_side3 {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.right_side3 p {
+    margin: 12px 0px;
+    /* font-size: 1.1rem;*/
+    line-height: 1.8rem;
+    color: black;
+}
+
+.about {
+    color: orangered;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+
+.right_side3 h1 {
+    font-size: 2.5rem;
+    padding: 10px 0px;
+}
+
+.right_side3 h1 span {
+    color: rgb(255, 70, 2);
+}
+
+.right_side3 .ple_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0px;
+}
+
+.right_side3 .ple_list ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.right_side3 .ple_btn button {
+    background-color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+}
+
+.ple_btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.ple_btn button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 12px 18px;
+}
+
+.ple {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.ple:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    color: rgb(255, 255, 255);
+}
+
+.ple h3 span {
+    font-weight: bold;
+}
+
+.ple h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.ple i {
+    font-size: 1.5rem;
+}
+
+.ple .pto {
+    width: 37px;
+    height: 37px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.s3 {
+    background-color: rgb(233, 232, 231);
+    padding: 5.2pc 0px;
+    position: relative;
+}
+
+.left_side3 .exp {
+    width: 63px;
+    height: 66px;
+    background-color: orangered;
+    color: white;
+    padding: 18px 17px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 14%;
+    left: 37%;
+}
+
+.left_side3 h4 {
+    font-size: 1.7rem;
+    text-align: left;
+    line-height: 25px;
+}
+
+.left_side3 img {
+    width: 200px;
+    height: 220px;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 0px 0px 19px 20px orangered inset;
+    transition: all 0.5s ease-in-out;
+}
+
+.left_side3 img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.left_side3 .pimg3 {
+    transform: translate(-25%, -20%);
+    background-color: rgb(250, 280, 290);
+}
+
+.left_side3 .simg3 {
+    transform: translate(-54%, 13%);
+    background-color: rgb(247, 241, 235);
+}
+
+.s4d {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.s4d>h2 {
+    color: orangered;
+    font-size: 0.9rem;
+    padding: 25px 0px 0px 0px;
+}
+
+.s4d>h1 {
+    color: black;
+    font-size: 2.1rem;
+    padding: 0px 0px 5px opx;
+    font-weight: 800;
+    transform: scaleY(1.3);
+}
+
+.s4box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.s4box div {
+    background-color: blueviolet;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 140px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 8px 10px 10px 12px;
+    transition: 0.2s all ease-in-out;
+}
+/*.s4box div i {
+    padding: 0px;
+    margin-bottom: 6px;
+}*/
+
+.s4box div:hover {
+    transform: scale(1.1);
+}
+
+.s4box h3 {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.s4box h3 span {
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.s4 {
+    background-color: rgb(216, 202, 183);
+}
+
+.s5>div {
+    background: linear-gradient(to right, rgb(56, 37, 13), rgb(18, 5, 31));
+    padding: 50px;
+}
+
+.left_side5 {
+    width: 50%;
+    color: white;
+}
+
+.right_side5 {
+    width: 50%;
+    color: white;
+}
+
+.right_side5 img {
+    margin-left: auto;
+}
+
+.left_side5 h1 {
+    color: white;
+    padding: 8px 0px;
+    font-size: 2.2rem;
+}
+
+.left_side5 p {
+    font-size: 0.8rem;
+    padding: 8px 0px;
+    line-height: 24px;
+}
+
+.left_side5 button {
+    border-radius: 5px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in;
+    margin: 15px 0px;
+}
+
+.left_side5 button:hover {
+    border: 1px solid;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    padding: 11px 16px;
+}
+
+.left_side5 h1 span {
+    color: orange;
+}
+
+.ablt {
+    display: block;
+}
+
+.ablt>h1 {
+    transform: scaleX(1.3);
+    transform: scaleY(1.1);
+    text-align: center;
+    font-size: 5.2rem;
+    padding: 0em 0px 0.8em 0px;
+}
+
+.ablbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.ablbox>div {
+    width: 32%;
+}
+
+.s6 {
+    padding: 5em 0px;
+}
+
+.s6>div {
+    width: 80%;
+}
+
+.ablbox div h1 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding-top: 15px;
+}
+
+.ablbox div h1 span {
+    color: orangered;
+}
+
+.ablbox div p {
+    font-size: 0.8rem;
+}
+
+.abileti {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.bar,
+.b1,
+.b2,
+.b3 {
+    width: 320px;
+    height: 4px;
+    background-color: rgb(204, 202, 202);
+    border-radius: 10px;
+    margin: 5px 0px;
+    position: relative;
+}
+
+.b1::after,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    background-color: orangered;
+    border-radius: 10px;
+    top: 0%;
+    left: 0%;
+}
+
+.b2::after {
+    width: 70%;
+}
+
+.b3::after {
+    width: 90%;
+}
+
+.s7 {
+    width: 100%;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+
+.s7>div {
+    width: 97%;
+    margin: auto;
+    position: relative;
+}
+
+.left_side7 {
+    width: 50%;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.left_side7 img {
+    color: gray;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.left_side7:hover img {
+    font-size: 2rem;
+    color: rgb(209, 30, 30);
+}
+
+.right_side7 {
+    width: 42%;
+    height: 16em;
+    padding: 8.5% 3.9%;
+    background-color: rgba(14, 13, 12, 0.911);
+    color: white;
+    position: relative;
+    height: auto;
+}
+
+.right_side7 h4 {
+    font-size: 1rem;
+    color: rgb(206, 108, 72);
+    padding: 4px 0px;
+}
+
+.right_side7 h1 {
+    font-size: 2rem;
+    color: white;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+
+.right_side7 p {
+    font-size: 0.8rem;
+    color: #c7c7c7;
+    ;
+    padding: 5px 0px;
+    font-weight: 100;
+}
+
+.srcboxs {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.srcboxs>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px 0px;
+    padding: 0px 29px 15px 29px;
+}
+
+.srcboxs_icon {
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    margin: 17px 0px;
+}
+
+.srcboxs h3 {
+    font-size: 0.9rem;
+}
+
+.srcboxs h3 span {
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: #c7c7c7;
+}
+
+.srcboxs div:hover {
+    box-shadow: inset 0px 0px 7px wheat;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.left_side8 {
+    width: 38%;
+    box-shadow: 2px 0px 3px rgb(253, 253, 253);
+}
+
+.right_side8 {
+    width: 59%;
+    height: 100%;
+    padding: 4.4% 05px;
+    margin-top: 5px;
+}
+
+.left_side8 h3 {
+    font-size: 0.9rem;
+    color: orangered;
+    padding: 5px 0px;
+}
+
+.left_side8 h1 {
+    font-size: 2.9rem;
+    font-weight: bold;
+    padding: 11px 0px;
+}
+
+.left_side8 h1 span {
+    color: orangered;
+}
+
+.left_side8 p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 11px;
+}
+
+.left_side8>button {
+    margin: 20px 0px;
+    padding: 10px 15px;
+    background-color: black;
+    color: wheat;
+    transition: all 0.1s ease-in;
+    border-radius: 5px;
+    border: none;
+}
+
+.left_side8 button:hover {
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 16px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.s8 .underplace {
+    width: 87%;
+    height: 168px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: -8px 0px 8px rgb(248, 247, 247);
+    padding-bottom: 11px;
+    padding-left: 50px;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.s8 .sliderbox {
+    width: 220px;
+    height: auto;
+    padding: 15px 18px;
+    background-color: rgb(255, 254, 253);
+    position: absolute;
+    box-shadow: 0px 0px 7px gray;
+    border-radius: 5px;
+    left: -70%;
+    top: 10%;
+    transition: all 0.4s ease-out;
+}
+
+.sliderbox>div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    padding: 10px 0px;
+}
+
+.sliderbox .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    border: 1px solid orangered;
+}
+
+.sliderbox p {
+    font-size: 0.7rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1.5;
+}
+
+.sliderbox .sdbox {
+    width: 40px;
+    height: 6px;
+    padding: 15px 13px 5px 13px;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    left: 5%;
+    bottom: -8.9%;
+}
+
+.sliderbox .sdbox::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-top: 0px solid transparent;
+    border-bottom: 10px solid rgb(124, 78, 78);
+    /*border-right: 10px solid black;*/
+    position: absolute;
+    right: -18.2%;
+    bottom: 9.7%;
+    transform: rotate(178deg) scale(1.4);
+}
+
+.sliderbox h1 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.sliderbox h1 span {
+    font-size: 0.6rem;
+    color: orangered;
+}
+
+.sliderbox .sdbox span {
+    color: white;
+}
+
+.s8 {
+    background-color: rgb(228, 252, 251);
+}
+
+.sl1 {
+    top: 0%;
+    left: 0%;
+}
+
+.sl2 {
+    left: 53.2%;
+}
+
+.sliderbox:hover {
+    transform: scale(1.1);
+    z-index: 9999;
+}
+/*section num: 9;*/
+
+.s9 {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(226, 185, 131);
+    height: auto;
+}
+
+.sd9 {
+    width: 98%;
+    height: 100%;
+    align-items: start;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: start;
+}
+
+.left_side9 {
+    width: 57%;
+    height: 100%;
+    background-color: rgb(44, 41, 41);
+    padding: 6% 0% 10% 0%;
+    margin: 0%;
+    position: relative;
+    left: -1%;
+}
+
+.right_side9 {
+    width: 40%;
+    min-height: 560px;
+    padding: 0%;
+}
+
+.left_side9d {
+    width: 80%;
+    height: 100%;
+    margin-left: 8%;
+}
+
+.left_side9 h4 {
+    font-size: 1rem;
+    color: rgb(180, 61, 17);
+    padding: 10px 0px;
+}
+
+.left_side9 h1 {
+    font-size: 2.7em;
+    color: white;
+    padding: 10px 0px;
+}
+
+.left_side9 h1 span {
+    color: rgb(221, 67, 11);
+    display: inline-block;
+}
+
+.left_side9 p {
+    padding: 10px 30px 10px 10px;
+    color: rgb(202, 202, 200);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.left_side9 .view {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.view img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 167, 2);
+    background-color: blue;
+    margin-left: -11px;
+    margin-bottom: 15px;
+}
+
+.client_rate h3 {
+    padding: 0px;
+    margin: 0px;
+    line-height: 0.5;
+    font-weight: 600;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.left_side9 button {
+    margin: 20px 5px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.left_side9 .Explore_btn {
+    background-color: black;
+}
+
+.left_side9 .Book_btn {
+    background-color: orangered;
+}
+
+.left_side9 .Explore_btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 12px 19px;
+}
+
+.left_side9 .Book_btn:hover {
+    padding: 12px 19px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.right_side9 {
+    position: relative;
+}
+/*css*/
+.service_box {
+    width: 560px;
+    height: auto;
+    position: absolute;
+    background-color: #fff1ec;
+    box-shadow: 0px 0px 4px gray;
+    display: flex;
+    flex-wrap: wrap;
+    left: -22%;
+    bottom: 10%;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.service_box div {
+    border-bottom: 1px solid rgb(235, 234, 234);
+    border-right: 1px solid rgb(235, 234, 234);
+    width: 44.8%;
+    padding: 2% 1% 2% 4%;
+}
+
+.service_box div h4 {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 20px 20px 0px 8px;
+}
+
+.service_box div p {
+    font-size: 0.7rem;
+    padding: 18px 20px 15px 20px;
+    position: relative;
+    /* border-left: 2px solid orangered;*/
+}
+
+.service_box div p::after {
+    content: "";
+    height: 50%;
+    width: 2px;
+    border-radius: 10px;
+    background-color: orange;
+    display: block;
+    position: absolute;
+    bottom: 20%;
+    left: 1%;
+}
+
+.service_box::before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    background-color: orangered;
+    position: absolute;
+    top: 42%;
+    left: 46.2%;
+    /*transform: translate(-50%, -50%);*/
+    animation: pulse 2s infinite;
+    box-shadow: 0 20px 40px rgb(0, 0, 0, 0, 15);
+}
+
+.service_box::after {
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-left: 12px solid white;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(255, 165, 0, 0.6);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 20px rgba(255, 165, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.s10d {
+    flex-direction: column;
+    gap: 50px;
+}
+
+.s10d>h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.s10d>h1 span {
+    color: orangered
+}
+
+.s10box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+}
+
+.s10box>div {
+    width: 22%;
+    background-color: rgb(255, 254, 253);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.s10box>div:hover {
+    transform: translateY(-3%);
+    box-shadow: 0px 0px 17px gray;
+}
+
+.s10box div .s10img {
+    height: 100%;
+    height: 180px;
+    position: relative;
+    border: 1px inset rgb(240, 237, 233);
+    border-radius: 5px;
+}
+
+.s10box>div .s10img>div {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    background-color: orangered;
+    padding: 3px 5px;
+}
+
+.s10box>div .s10img>div h5 {
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.s10box div .s10img img {
+    width: 100%;
+    height: 100%;
+}
+
+.s10box h4 {
+    font-size: 0.6rem;
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.s10box h4 span {
+    color: orangered;
+    font-size: 0.8rem;
+}
+
+.s10box h1 {
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.s10box p {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+}
+
+.s10box button {
+    padding: 8px 15px;
+    color: white;
+    background-color: orangered;
+    margin: 16px 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.s10box button:hover {
+    padding: 9px 16px;
+    color: orangered;
+    background-color: white;
+    border: 1px solid;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(88, 80, 80);
+    padding: 2em 0px;
+}
+
+footer>div {
+    width: 85%;
+    margin: auto;
+}
+
+footer>div .fot_up {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer>div .fot_up>div {
+    width: 26%;
+}
+
+.fot_btn h1 {
+    font-size: 1.5rem;
+    color: white;
+    padding: 5px;
+}
+
+.fot_btn p {
+    font-size: 0.8rem;
+    color: rgb(233, 223, 223);
+    padding: 5px;
+}
+
+.fot_btn button {
+    padding: 7px 18px;
+    color: white;
+    background-color: orangered;
+    margin: 10px 05px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.fot_btn button:hover {
+    padding: 8px 16px;
+    color: orangered;
+    background-color: white;
+    border: 1px solid;
+    font-weight: bold;
+}
+
+.list1 ul,
+.list2 ul {
+    list-style: none;
+}
+
+.list1 h5,
+.list2 h5 {
+    color: white;
+    font-size: 0.8rem;
+    padding: 11px 0px;
+}
+
+.list1 ul li,
+.list2 ul li {
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 3px 0px;
+}
+
+.list1 ul li a,
+.list2 ul li a {
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+}
+
+.list1 ul li a:hover,
+.list2 ul li a:hover {
+    text-decoration: underline;
+    color: orangered;
+    font-weight: bold;
+}
+
+.fot_emailbox h5 {
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.fot_emailbox p {
+    font-size: 0.8rem;
+    color: rgb(206, 206, 206);
+    padding: 10px;
+}
+
+.fot_emailbox .eml {
+    display: flex;
+    margin: 10px;
+}
+
+.fot_emailbox .eml button {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: orangered;
+    border: none;
+}
+
+.fot_emailbox .eml button::after {
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-left: 8px solid white;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    display: block;
+    background-color: transparent;
+}
+
+.fot_emailbox .eml input {
+    padding: 8px 11px;
+    border: none;
+    width: 100%;
+    font-size: 11px;
+    outline: none;
+}
+
+.fot_btn {
+    padding-right: 0px;
+}
+
+.fot_down {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.fot_down p {
+    font-size: 0.8rem;
+    color: rgb(206, 206, 206);
+}
+
+.fot_down div {
+    font-size: 0.8rem;
+    color: rgb(206, 206, 206);
+}
+
+@media screen and (min-width: 350px) and (max-width: 790px) {
+    header>div {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header .btn {
+        margin-right: 2%;
+    }
+    header .nav {
+        display: none;
+    }
+    .moble_heder {
+        display: block;
+    }
+    /* section 1*/
+    .left_side1 {
+        width: 100%;
+        text-align: center;
+    }
+    .left_side1 h1 {
+        font-size: 3.2rem;
+        text-align: center;
+        padding: 0px;
+    }
+    .left_side1 .s1b {
+        width: 80%;
+        margin: auto;
+    }
+    .right_side1 {
+        width: 100%;
+    }
+    .right_side1 .dimg {
+        width: 103%;
+        height: 500px;
+        transform: translate(-05%, 15%);
+    }
+    .left_side2_title {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0px;
+        margin: 0px;
+    }
+    .right_side2_icons {
+        width: 100%;
+        flex-direction: column;
+        padding: 10em 0px;
+    }
+    .right_side2_icons>div {
+        width: 90%;
+        margin: auto;
+        padding: 12% 0%;
+        gap: 20px;
+        font-size: 1.5rem;
+    }
+    section>div {
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+        gap: 100px;
+    }
+    .left_side3 {
+        width: 100%;
+    }
+    .right_side3 {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .right_side3 p {
+        margin: 12px 20px;
+        /* font-size: 1.1rem;*/
+        line-height: 1.2rem;
+        color: black;
+        display: inline-block
+    }
+    .about {
+        color: orangered;
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+        margin-left: 20px;
+    }
+    .right_side3 h1 {
+        font-size: 2.4rem;
+        padding: 10px 20px;
+    }
+    .right_side3 h1 span {
+        color: rgb(255, 70, 2);
+    }
+    .right_side3 .ple_list {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin: 10px 20px;
+    }
+    .right_side3 .ple_list ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 16px;
+    }
+    .u {
+        padding: 0px;
+        margin: 0px;
+        transform: translateX(-6.8%);
+    }
+    .right_side3 .ple_btn button {
+        background-color: rgb(0, 0, 0);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-size: 0.9rem;
+        transition: all 0.4s ease;
+    }
+    .ple_btn {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .s4d h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .s4d h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .s4box {
+        flex-direction: column;
+        width: 100%;
+        padding: 2em 0px;
+        gap: 30px;
+    }
+    .s4box div {
+        width: 80%;
+        margin: auto;
+        height: 560px;
+        border-radius: 10px;
+    }
+    .s4box div:hover {
+        transform: scale(1);
+    }
+    .s5>div {
+        background: linear-gradient(to right, rgb(56, 37, 13), rgb(18, 5, 31));
+        padding: 30px;
+        text-align: left;
+        width: 81%;
+        margin: auto;
+    }
+    .left_side5 {
+        width: 100%;
+    }
+    .right_side5 {
+        width: 100%;
+    }
+    .right_side5 img {
+        margin-left: auto;
+    }
+    .left_side5 h1 {
+        color: white;
+        padding: 8px 0px;
+        font-size: 3.2rem;
+    }
+    .left_side5 p {
+        font-size: 0.9rem;
+        padding: 8px 0px;
+        line-height: 24px;
+    }
+    .ablt>h1 {
+        font-size: 4rem;
+    }
+    .ablbox {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 80px;
+        width: 100%;
+    }
+    .ablbox>div {
+        width: 80%;
+    }
+    .s6>div {
+        width: 90%;
+    }
+    .left_side7 {
+        width: 100%;
+        border: 2px inset;
+        margin: 0px;
+    }
+    .right_side7 {
+        width: 100%;
+        margin: 0px;
+        padding: 60px 30px;
+    }
+    .s7>div {
+        width: 100%;
+        padding: 0%;
+    }
+    .right_side7 h1 {
+        font-size: 2.5rem;
+    }
+    .right_side7 p {
+        font-size: 0.9rem;
+        padding-right: 50px;
+    }
+    .srcboxs {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .srcboxs>div {
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .left_side8 {
+        width: 100%;
+    }
+    .right_side8 {
+        width: 100%;
+        overflow-X: hidden;
+        padding-bottom: 150px;
+    }
+    .left_side8 h3 {
+        padding: 5px 20px;
+        font-size: 1.1rem;
+    }
+    .left_side8 h1 {
+        padding: 10px 20px;
+        font-size: 2rem;
+    }
+    .left_side8 p {
+        padding: 30px 20px;
+    }
+    .left_side8 BUTTon {
+        margin: 10px 20px;
+    }
+    .s8 .underplace {
+        transform: scale(2.1) translateX(23.6%);
+        overflow: initial;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .s9>div {
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+    .left_side9 {
+        width: 100%;
+        margin: 0px;
+        left: 0%;
+        padding: 3em 0px;
+    }
+    .right_side9 {
+        width: 100%;
+    }
+    .left_side9 h1 {
+        font-size: 3.5rem;
+    }
+    .left_side9 p {
+        font-size: 0.8rem;
+    }
+    .left_side9 .view {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 0px;
+    }
+    .left_side9 button {
+        margin: 0px 5px 20px 5px;
+    }
+    /*----*/
+    .service_box {
+        width: 380px;
+        flex-direction: column;
+        left: 15%;
+        bottom: 12%;
+        /*justify-content: center;*/
+        padding: 20px 0px;
+    }
+    .service_box div {
+        border-right: none;
+        width: 85%;
+    }
+    /*     */
+    .service_box::before {
+        top: 50%;
+        left: 80%;
+    }
+    .service_box::after {
+        top: 54%;
+        left: 85.6%;
+    }
+    .s10box {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .s10box>div {
+        width: 95%;
+    }
+    .s10box>div h1 {
+        font-size: 1.8rem;
+        padding: 10px 80px 10px 25px;
+    }
+    .s10box>div p {
+        padding: 10px 25px;
+    }
+    .s10box>div button {
+        margin: 20px 20px 30px 25px;
+    }
+    .s10box>div h4 {
+        padding: 20px 25px 10px 25px;
+    }
+    .s10box div .s10img {
+        max-height: 500px;
+        min-height: 370px;
+    }
+    footer>div {
+        width: 80%;
+    }
+    footer>div .fot_up {
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+    footer>div .fot_up>div {
+        width: 100%;
+    }
+    .fot_btn {
+        padding: 0px;
+        margin: 0px;
+    }
+    .fot_down {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .fot_emailbox .eml input {
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+    section{
+        overflow-x: hidden;
+    }
+   body{
+        overflow-x: hidden;
+    }
+}
+
+
+/*এই হলো আপনার সম্পূর্ণ CSS কোড। এখন আপনি কপি করে ব্যবহার করতে পারবেন।*/
+
+ </style>
+ 
+ 
+ 
+ 
+ 
+ 
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="test/img/rif.png" alt="rif">
+                <h2>Logistic</h2>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="test/rif.html">page</a></li>
+                    <li><a href="test/clone.html">Clone</a></li>
+                    <li><a href="index.html">project</a></li>
+                    <li><a href="test/rif.html">Newa</a></li>
+                    <li><a href="test/clone.html">Shop</a></li>
+
+                </ul>
+
+            </nav>
+            <nav class="nav2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="test/rif.html">page</a></li>
+                    <li><a href="test/clone.html">Clone</a></li>
+                    <li><a href="index.html">project</a></li>
+                    <li><a href="test/rif.html">Newa</a></li>
+                    <li><a href="test/clone.html">Shop</a></li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <button btn>Get a Quote</button>
+
+            </div>
+            <button class="moble_heder" onclick="togglebtn()">|||</button>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="main_sc">
+                <div class="left_side1" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="clon"> Get specialist <br> Cargo service <br> <span>Worldwide</span></h1>
+                    <p>This is Rifat page</p>
+                    <div class="s1b">
+                        <button class="ex"> Explore More </button>
+                        <button class="bok"> Book Now</button>
+                    </div>
+                </div>
+                <img src="mm.avif" alt="rifat" class="mini">
+                <div class="right_side1" data-aos="fade-left">
+                    <div class="dimg">
+                        <img src="trck.webp" alt="rifat">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="s2">
+        <div>
+            <div class="left_side2_title" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000">
+                <h1>We offers cost efficient <br> <span>Transport</span> shippinig </h1>
+            </div>
+            <div class="right_side2_icons" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div>
+                    <i>🕒</i>
+                    <span>Optimized <br> Cost</span>
+                </div>
+                <div>
+                    <i>🏦</i>
+                    <span>Reduced Travel <br> Time</span>
+                </div>
+                <div>
+                    <i>🏡</i>
+                    <span>Dlivery on <br> Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s3">
+        <div>
+            <div class="left_side3 img3" data-aos="fade-up-right">
+                <img src="test/img/truck2.webp" alt="Sorry no Imge1" class="pimg3">
+                <img src="" alt="Sorry no Imge2" class="simg3">
+                <div class="exp">
+                    <h4>25+</h4>
+                    <p>Years or Expeience</p>
+                </div>
+            </div>
+            <div class="right_side3 text3" data-aos="fade-up-left">
+                <h3 class="about">ABOUT US</h3>
+                <h1>The Transportation and Logistics <span>INDUSTRY</span></h1>
+                <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Rat ione obcaec ati qui fuga laudantium corrupti dolorem <br> br atque minima magnam culpa numquam necessitatibus <br> dignissimos, ea repellendu s aliquid voluptate s quam
+                    <br> dolorum perferendis recusandae!
+
+                </P>
+                <div class="ple_list">
+                    <ul>
+                        <li>✔️ sefety and Reliability</li>
+                        <li>✔️ Warehoseusing & Districtiion</li>
+
+                    </ul>
+                    <ul class="u">
+                        <li>✔️ Ento-to-end Transportion</li>
+                        <li>✔️ Fast Transportion</li>
+                    </ul>
+                </div>
+                <div class="ple_btn">
+                    <button>Diccover More</button>
+                    <div class="ple">
+                        <div class="pto"><i>👤</i></div>
+                        <h3><span> Marks Danile</span> <br> MANAGER</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="s4">
+        <div class="s4d">
+            <h2>SERVICE WE TRANSPORT</h2>
+            <h1>Specialist Logistics service</h1>
+            <div class="s4box" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                <div>
+                    <i>...</i>
+                    <h3><span>Warehoseusing</span> <br> Road service </h3>
+                </div>
+                <div>
+                    <i>...</i>
+                    <h3><span>Our flay service</span> <br> Air Freight</h3>
+                </div>
+                <div>
+                    <i>...</i>
+                    <h3><span>SERVICEES</span> <br> Sea Freight </h3>
+                </div>
+                <div>
+                    <i>...</i>
+                    <h3><span> Ware House</span> <br> Raijl Transport</h3>
+                </div>
+                <div>
+                    <i>...</i>
+                    <h3><span>Logistics</span> <br> Other Solution</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s5">
+        <div>
+            <div class="left_side5" data-aos="fade-right">
+                <h1>Recognized as one of the Leading <span>Company!</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing elit. Nesciunt, soluta quia.
+
+                </p>
+
+                <button>Book Your parsel</button>
+            </div>
+            <div class="right_side5" data-aos="fade-left">
+                <img src="" alt="Sorry no img">
+            </div>
+        </div>
+    </section>
+    <section class="s6">
+        <div class="ablt">
+            <h1 data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">Logistics</h1>
+            <div class="ablbox">
+                <div data-aos="fade-right" data-aos-delay="300" data-aos-offset="0">
+                    <h1>We Create scope to reach <span>Portential</span></h1>
+                </div>
+                <div data-aos="fade-top" data-aos-delay="300" data-aos-offset="0">
+                    <p>Lorem ipsum, dolor sit amet consectapiente, gr mufyd jyfyf bkuyfyf in impedit ducimus minus accusantium delectus ullam laudantium minima, molestias dolores esse incidunt asperiores?
+                    </p>
+                </div>
+                <div class="abileti" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+                    <div>
+                        <label for="wrk1">Warehoseusing</label>
+                        <div id="wrk1" class="bar b1"> </div>
+                    </div>
+                    <div>
+                        <label for="wrk2">Art Fireght</label>
+                        <div id="wrk2" class="bar b2"></div>
+
+                    </div>
+                    <div>
+                        <label for="wrk3">Roed Transports</label>
+                        <div id="wrk3" class="bar b3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s7">
+        <div class="sd7">
+            <div class="left_side7" data-aos="fade-right" data-aos-delay="300" data-aos-offset="0">
+                <img src="" alt="sorry no img">
+            </div>
+            <div class="right_side7" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+                <h4>Logistic service provider</h4>
+                <h1>We Create <br>Opportunity to <br> reach Portential</h1>
+                <p>Loremtur fugiat dolores ipsum dolor sit amet consectetur quun ipsum dolor sit amet consectetur quun ipsum dolor sit amet consectetur quunid numquam natus, nostrum at iste laboriosam corporis reprehenderit earum dolorum porro deleniti.
+
+                </p>
+                <div class="srcboxs">
+                    <div>
+                        <div class="srcboxs_icon"><i>.||.</i></div>
+                        <h3>Global Network <br> <span> Worldwide coverage<span></h3></div>
+                    <div>
+                        <div class="srcboxs_icon"> <i>.||.</i></div> 
+                    <h3>On-Time Delivery <br> <span> Worldwide coverage<span></h3></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s8">
+        <div>
+            <div class="left_side8" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="1000">
+                <h3>CLIENT TESTIMONIAL</h3>
+                <h1>Our customers <br><span>REVIEWS</span></h1>
+                            <P>Lorem ipsum dolor, sit amet consectetur adipism, quas aliquid laboriosam reprehenderit omnis illo fugit recusandae itaque aperiam temporibus cumque d
+
+                            </P>
+                            <BUTTon>See All Reviews</BUTTon>
+
+                    </div>
+                    <div class="right_side8" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000">
+                        <div class="underplace">
+                            <div class="sliderbox sl1" style="left: 50%; top:10%">
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 1<br> <span> MANAGER</span></h1>
+                                </div>
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+                            <div class="sliderbox sl2" style="left: 2.9%;">
+
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 2<br> <span> MANAGER</span></h1>
+                                </div>
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+
+
+                            <div class="sliderbox sl3" style="left:-70%;">
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 3<br> <span> MANAGER</span></h1>
+                                </div>
+
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+
+
+                            <div class="sliderbox" style="left:-70%;">
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 4<br> <span> MANAGER</span></h1>
+                                </div>
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+
+
+                            <div class="sliderbox" style="left:-70%;">
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 5<br> <span> MANAGER</span></h1>
+                                </div>
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+
+
+                            <div class="sliderbox s" style="left:-70%;">
+                                <div>
+                                    <div class="img"><img src="Noimg" alt=""></div>
+                                    <h1> Ronald Richards 6<br> <span> MANAGER</span></h1>
+                                </div>
+                                <p> A quas orem ipsum gfhgffd jjf vdfbd ;lkjhd gfhfad tnzgnz brh fdbddf dbrb rb dolor, sit amet consectetur adipism, quas </p>
+                                <div class="sdbox"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+    <section class="s9">
+        <div class="sd9">
+            <div class="left_side9" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="left_side9d">
+                    <h4>
+                        WHY CHOODE US
+                    </h4>
+                    <h1>Transportation Services We are often <span>CONSIDERED</span></h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatum earum vitae nulla itaque, veniam maiores eaque obcaecati voluptatem atqu
+                    </p>
+                    <div class="view">
+                        <div class="img">
+                            <img src="" alt="sorry">
+                            <img src="" alt="sorry">
+                            <img src="" alt="sorry">
+                        </div>
+                        <div class="client_rate">
+                            <h3>1500+</h3>
+                            <p>Happy Client</p>
+                        </div>
+                    </div>
+                    <button class="Explore_btn">Explore More </button>
+                    <button class="Book_btn">Book Now </button>
+                </div>
+            </div>
+            <div class="right_side9" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+                <!---         <img src="" alt="Sorry"-->
+                <div class="service_box">
+
+                    <div class="srvc1">
+
+                        <h4> <span>ooo</span> Global Logistics Operation</h4>
+                        <p> A logistics service provide compny pats a provide role inthe global </p>
+                    </div>
+
+                    <div class="srvc1">
+
+                        <h4> <span>ooo</span> Safety & secunrity Delivery</h4>
+                        <p> A logistics service provide compny pats a provide role inthe global </p>
+
+                    </div>
+                    <div class="srvc1">
+
+                        <h4> <span>ooo</span> Professiional Logistics </h4>
+                        <p> A logistics service provide compny pats a provide role inthe global </p>
+                    </div>
+                    <div class="srvc1">
+
+                        <h4> <span>ooo</span> Real Time Location Tracking </h4>
+                        <p> A logistics service provide compny pats a provide role inthe global </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="s10">
+        <div class="s10d">
+            <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">Letest News Delivery <br> From Our <span>BLOG</span>
+
+            </h1>
+            <div class="s10box">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <div class="s10img"><img src="" alt="">
+                        <div class="ab">
+                            <h5>05 <br><span>FER</span></h5>
+                        </div>
+                    </div>
+                    <div class="dd">
+                        <h4><span>oo</span> Robat Fox</h4>
+                        <h4><span>oo</span> 2 comment</h4>
+                        <h1>Mastering Last Mile Delivery stratering for Scucess</h1>
+                        <p>A logistics service provide compny pats a provide role inthe global </p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">
+                    <div class="s10img "><img src=" " alt=" ">
+                        <div class="ab ">
+                            <h5>05 <br><span>FER</span></h5>
+                        </div>
+                    </div>
+                    <h4><span>oo</span> Robat Fox</h4>
+                    <h4><span>oo</span> 2 comment</h4>
+                    <h1>Mastering Last Mile Delivery stratering for Scucess</h1>
+                    <p>A logistics service provide compny pats a provide role inthe global </p>
+                    <button>Read More</button>
+                </div>
+
+                <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+                    <div class="s10img "><img src=" " alt=" ">
+                        <div class="ab ">
+                            <h5>05 <br><span>FER</span></h5>
+                        </div>
+                    </div>
+                    <h4><span>oo</span> Robat Fox</h4>
+                    <h4><span>oo</span> 2 comment</h4>
+                    <h1>Mastering Last Mile Delivery stratering for Scucess</h1>
+                    <p>A logistics service provide compny pats a provide role inthe global </p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div>
+            <div class="fot_up ">
+                <div class="fot_btn ">
+                    <h1>Logistic</h1>
+                    <p>A logistics service provide compny pats a provide role inthe global
+                    </p>
+                    <button>Get Start</button>
+                </div>
+                <div class="list1 ">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href=" ">About</a></li>
+                        <li><a href=" ">Service</a></li>
+                        <li><a href=" ">Careers</a></li>
+                        <li><a href=" ">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="list2 ">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href=" ">Contact</a></li>
+                        <li><a href=" ">Support</a></li>
+                        <li><a href=" ">Privecy</a></li>
+                        <li><a href=" ">Tems</a></li>
+                    </ul>
+                </div>
+                <div class="fot_emailbox ">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to get latest Updatecs</p>
+                    <div class="eml ">
+                        <input type="email " placeholder="E-mail Addracse ">
+                        <button></button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="fot_down ">
+                <p>c 2026 Logictics . All Rights Rerserved M-softTech</p>
+                <div><i>FB </i><i> twter</i> <i> instragrm</i> <i> linked</i></div>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+<script>
+  //All Verible..............
+var onhover_stop = document.querySelector(".underplace")
+
+var count = 2
+var forbox = 0
+var lok = 0
+var forbox2 = 0
+    // End Verible...............
+
+//Start All logic...............
+
+// One mouseleave setInterval Function call....
+onhover_stop.addEventListener("mouseleave", () => {
+        stvl_call()
+    })
+    //SetInterval Function And Logic
+
+
+function stvl_call() {
+    // Verible
+    var stinrvl
+        ////////
+        ////On hover stop setInterval..
+    onhover_stop.addEventListener("mouseenter", () => {
+            clearInterval(stinrvl)
+        })
+        ////////////////
+
+
+    //SetInterval Logic....
+    stinrvl = setInterval(function() {
+        var slider = document.querySelectorAll(".sliderbox")
+            //if (silder.style.left == "0")
+            // slider.style.top
+        var len = slider.length
+        count++
+        //Up down  
+
+
+        //↓ down 
+
+
+        //???
+
+
+        if (lok == 0) {
+            if (slider[len - 1].style.left == "-70%") {
+                for (box of slider) {
+                    forbox++
+
+
+
+
+                    if (box.style.left == "-70%") {
+                        box.style.left = "2.9%";
+                        if (count == forbox) {
+                            forbox = 0
+                            break
+                        }
+                    } else if (box.style.left == "2.9%") {
+                        box.style.left = "50%";
+                        if (count == forbox) {
+                            forbox = 0
+                            break
+
+                        }
+                    } else if ((box.style.left == "50%")) {
+                        box.style.left = "110%";
+                        if (count == forbox) {
+                            forbox = 0
+                            break
+                        }
+                    }
+
+
+
+
+                }
+                //end loop
+                // Trnsper naxt condition
+                if (slider[len - 1].style.left == "2.9%" && slider[0].style.left == "110%") {
+                    forbox2 = 0
+                    lok = 1
+                }
+            }
+        }
+
+        //lookind
+
+
+
+        //next
+        else if (lok == 1) {
+            if (slider[0].style.left == "110%") {
+                for (var rvsbx = len - 1; rvsbx >= 0; rvsbx--) {
+                    forbox2++
+
+                    //console.log(rvsbx)
+                    //    console.log(slider[rvsbx].style.left)
+                    if (slider[rvsbx].style.left == "110%") {
+                        slider[rvsbx].style.left = "50%";
+                        if (count == forbox2) {
+                            forbox2 = 0
+                            break
+                        }
+                    } else if (slider[rvsbx].style.left == "50%") {
+                        slider[rvsbx].style.left = "2.9%";
+                        if (count == forbox2) {
+                            forbox2 = 0
+                            break
+                        }
+                    } else if ((slider[rvsbx].style.left == "2.9%")) {
+                        slider[rvsbx].style.left = "-70%";
+                        if (count == forbox2) {
+                            forbox2 = 0
+                            break
+                        }
+                    }
+                }
+                //end loop
+                if (slider[len - 1].style.left == "-70%" && slider[0].style.left == "50%") {
+                    forbox = 0
+                    lok = 0
+                }
+
+
+            }
+        }
+
+
+
+
+
+
+        //setinterval
+        if (count == len) {
+            count = 2
+        }
+
+    }, 1900)
+}
+stvl_call()
+
+
+
+//...................
+
+function togglebtn() {
+
+
+    var toggle = document.querySelector(".nav2")
+
+
+    toggle.classList.toggle("toggle_heder")
+
+
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
